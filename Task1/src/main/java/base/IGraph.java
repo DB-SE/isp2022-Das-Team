@@ -7,8 +7,8 @@ import java.util.Set;
 public interface IGraph {
 
 
-    List<Node> depthSearch(Node node, Node curNode, Set<Node> passedNodes, List<Node> curPath);
+    List<Node> depthSearch(Node node);
 
-    BaseGraph findMst();
+    List<Node> findMst();
 
 }

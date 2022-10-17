@@ -11,4 +11,8 @@ public abstract class GraphFeatureComponent implements IGraph {
         this.graph = graph;
     }
 
+    public BaseGraph getGraph() {
+        return graph;
+    }
+    
 }

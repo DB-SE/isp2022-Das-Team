@@ -3,24 +3,46 @@ package base;
 import java.util.*;
 
 public class Node {
-    private UUID nodeId;
-    private Set<Node> neighbors = new HashSet<>();
+	
 
-    public Node() {
-        this.nodeId = UUID.randomUUID();
+	protected Map<Node,Integer> neighbors;
+    private final UUID id;
+
+    
+    public Node(Set<Node> nodes) {
+        nodes.forEach(x->this.neighbors.put(x,1));
+        this.id = UUID.randomUUID();
+    }
+    
+    protected Node(Map<Node,Integer> neighbors) {
+    	this.neighbors = neighbors;
+        this.id = UUID.randomUUID();
     }
 
-    public void initConnectionsList(List<Edge> someEdges) {
-        for (Edge edge : someEdges) {
-            if (Objects.equals(edge.getSource().getNodeId(), this.nodeId)) {
-                this.neighbors.add(edge.getTarget());
-            }
-            if (Objects.equals(edge.getTarget().getNodeId(), this.nodeId)) {
-                this.neighbors.add(edge.getSource());
-            }
-        }
+    public Map<Node,Integer> getNeighbors() {
+        return neighbors;
     }
 
+    public void setNeighbors(Map<Node,Integer> neighbors) {
+        throw new NotImplementedException();
+    }
+    
+    public void setNeighbors(Set<Node> neighbors) {
+    	neighbors.forEach(x->this.neighbors.put(x,1));
+    }
+
+    public void addNeighbor(Node neighbor) {
+        this.neighbors.put(neighbor,1);
+    }
+    
+    public void addNeighbor(Node neighbor, Integer value) {
+        throw new NotImplementedException();
+    }
+
+    public UUID getId() {
+        return id;
+    }
+   
     public String getLabel() {
         throw new NotImplementedException();
     }
@@ -29,19 +51,5 @@ public class Node {
         throw new NotImplementedException();
     }
 
-    public UUID getNodeId() {
-        return nodeId;
-    }
-
-    public void setNodeId(UUID nodeId) {
-        this.nodeId = nodeId;
-    }
-
-    public Set<Node> getNeighbors() {
-        return neighbors;
-    }
-
-    public void setNeighbors(Set<Node> neighbors) {
-        this.neighbors = neighbors;
-    }
+ 
 }
