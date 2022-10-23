@@ -3,15 +3,24 @@ package base;
 import java.util.*;
 
 public class Node {
-	
 
 	protected Map<Node,Integer> neighbors;
     private final UUID id;
-
+    protected String label;
     
     public Node(Set<Node> nodes) {
         nodes.forEach(x->this.neighbors.put(x,1));
         this.id = UUID.randomUUID();
+    }
+    
+    public Node() {
+    	this.neighbors = new HashMap<>(); 
+        this.id = UUID.randomUUID();
+    }
+    
+    public Node(Node node) {
+    	this.neighbors = new HashMap<>(); 
+        this.id = node.getId();
     }
     
     protected Node(Map<Node,Integer> neighbors) {
@@ -32,7 +41,9 @@ public class Node {
     }
 
     public void addNeighbor(Node neighbor) {
-        this.neighbors.put(neighbor,1);
+    	Map<Node,Integer> newNeighbors = new HashMap<>(this.neighbors);
+    	newNeighbors.put(neighbor,1);
+    	this.setNeighbors(newNeighbors);
     }
     
     public void addNeighbor(Node neighbor, Integer value) {
@@ -51,5 +62,4 @@ public class Node {
         throw new NotImplementedException();
     }
 
- 
 }

@@ -16,13 +16,13 @@ public class DepthSearchAndMst extends GraphFeatureComponent {
     
 
     @Override
-    public List<Node> depthSearch(Node node) {
+    public List<Node> depthSearch(Node startNode, Node node) {
     	DepthSearch ds = new DepthSearch(this.getGraph());
-        return ds.depthSearch(node);
+        return ds.depthSearch(startNode, node);
     }
 
     @Override
-    public List<Node>  findMst() {
+    public List<WeightedNode> findMst() {
     	Mst_DJP mst = new Mst_DJP(this.getGraph());
         return mst.findMst();
     }

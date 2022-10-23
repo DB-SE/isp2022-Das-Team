@@ -15,16 +15,15 @@ public class DepthSearch extends GraphFeatureComponent {
     }
 
     
-    public List<Node> depthSearch(Node toBeFound) {
+    public List<Node> depthSearch(Node startNode ,Node toBeFound) {
         if (this.getGraph().getNodes().isEmpty() || !(this.getGraph().getNodes().contains(toBeFound))) {
             return new ArrayList<>();
         }
-        Node curNode = this.getGraph().getNodes().get(0);
-        return helper(curNode,toBeFound,new ArrayList<>(), new HashSet<>(),new ArrayList<>());
+        return depthSearchHelper(startNode,toBeFound,new ArrayList<>(), new HashSet<>(),new ArrayList<>());
     }
 
 
-    private List<Node> helper(Node curNode, Node toBeFound, List<Node>possibleNextNodes, Set<Node> passedNodes, List<Node> curPath){
+    private List<Node> depthSearchHelper(Node curNode, Node toBeFound, List<Node>possibleNextNodes, Set<Node> passedNodes, List<Node> curPath){
         curPath.add(curNode);
         passedNodes.add(curNode);
         Set<Node> curNeighbors = curNode.getNeighbors().keySet();
@@ -42,17 +41,18 @@ public class DepthSearch extends GraphFeatureComponent {
         if (curNeighbors.isEmpty() || passedNodes.containsAll(curNeighbors)) {
             for (Node node : curPath) {
                 if (node.getNeighbors().containsKey(curNode)) {
-                    curPath = curPath.subList(0, curPath.indexOf(node));
+                    curPath = curPath.subList(0, curPath.indexOf(node)+1);
                 }
             }
         }
-        return helper(curNode, toBeFound,possibleNextNodes,passedNodes, curPath);
+        return depthSearchHelper(curNode, toBeFound,possibleNextNodes,passedNodes, curPath);
     }
           
        
     @Override
-    public List<Node>  findMst() {
+    public List<WeightedNode> findMst() {
         throw new NotImplementedException();
     }
+    
 
 }

@@ -1,14 +1,13 @@
 package base;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
+
+import features.WeightedNode;
 
 public interface IGraph {
+	
+    List<Node> depthSearch(Node startNode, Node node);
 
-
-    List<Node> depthSearch(Node node);
-
-    List<Node> findMst();
+    List<WeightedNode> findMst();
 
 }

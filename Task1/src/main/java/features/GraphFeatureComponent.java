@@ -14,5 +14,5 @@ public abstract class GraphFeatureComponent implements IGraph {
     public BaseGraph getGraph() {
         return graph;
     }
-    
+ 
 }
