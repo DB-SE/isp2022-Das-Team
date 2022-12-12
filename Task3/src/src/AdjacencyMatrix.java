@@ -6,10 +6,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import interfaces.IGraphAlgo;
+
 /**
  * TODO description
  */
-public class AdjacencyMatrix extends AbstractDecorator {
+public class AdjacencyMatrix extends AbstractDecorator implements IGraphAlgo {
 
 	int[][] adjacencyMatrix;
 	ConcreteGraph graph;
@@ -93,6 +95,19 @@ public class AdjacencyMatrix extends AbstractDecorator {
 			}
 		}
 		return nodes;
+	}
+	
+	
+	public int[][] getAdjacencyMatrix () {
+		return this.adjacencyMatrix;
+	}
+
+	
+	//ToDo: throw sth here to not return null
+	@Override
+	public ConcreteGraph mst() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

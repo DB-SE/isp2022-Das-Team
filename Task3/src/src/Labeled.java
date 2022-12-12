@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Labeled extends AbstractDecorator {
+import interfaces.IAttribute;
+
+public class Labeled extends AbstractDecorator implements IAttribute {
 	
 	Map<Node, String> nodeToLabel = new HashMap<Node, String>();
 	ConcreteGraph graph;
@@ -26,6 +28,11 @@ public class Labeled extends AbstractDecorator {
 
 	public String getLabel(Node node) {
 		return this.nodeToLabel.get(node);
+	}
+
+	@Override
+	public Object getData(Object inputData) {
+		return this.getLabel((Node)inputData);
 	}
 
 }

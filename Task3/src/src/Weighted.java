@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Weighted extends AbstractDecorator {
+import interfaces.IAttribute;
+
+public class Weighted extends AbstractDecorator implements IAttribute {
 	
 	Map<Edge, Integer> nodeToWeight = new HashMap<Edge, Integer>();
 	ConcreteGraph  graph;
@@ -30,6 +32,13 @@ public class Weighted extends AbstractDecorator {
 	public int getWeight(Edge edge) {
 		return this.nodeToWeight.containsKey(edge)?nodeToWeight.get(edge):0;
 	}
-	
+
+
+	@Override
+	public Object getData(Object inputData) {
+		return this.getWeight((Edge)inputData);
+	}
+
+
 
 }

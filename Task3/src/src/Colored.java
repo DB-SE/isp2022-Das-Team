@@ -4,10 +4,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import interfaces.IAttribute;
+
 /**
  * TODO description
  */
-public class Colored extends AbstractDecorator { 
+public class Colored extends AbstractDecorator implements IAttribute { 
 
 	Map<Node, String> nodeToColor = new HashMap<Node, String>();
 	ConcreteGraph graph;
@@ -29,5 +31,10 @@ public class Colored extends AbstractDecorator {
 	
 	public String getColor(Node node) {
 		return this.nodeToColor.get(node);
+	}
+
+	@Override
+	public Object getData(Object inputData) {
+		return this.getColor((Node)inputData);
 	}
 }

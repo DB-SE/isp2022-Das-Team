@@ -11,4 +11,5 @@
 	<feature manual="selected" name="DFS"/>
 	<feature manual="selected" name="MST"/>
 	<feature manual="selected" name="ExportAdjacency"/>
+	<feature manual="selected" name="BFS"/>
 </configuration>
