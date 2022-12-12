@@ -110,4 +110,10 @@ public class AdjacencyMatrix extends AbstractDecorator implements IGraphAlgo {
 		return null;
 	}
 
+	@Override
+	public boolean isDirected() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

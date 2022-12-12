@@ -30,6 +30,7 @@ public class Main {
 		for (IGraphAlgo gA:graphAlfo) {
 			gA.getAdjacencyMatrix();
 			gA.mst();
+			gA.isDirected();
 		}
 		for (IAttribute as:attributes) {
 			as.getData(data);

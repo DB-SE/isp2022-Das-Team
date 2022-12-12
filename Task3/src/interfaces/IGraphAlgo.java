@@ -14,5 +14,6 @@ public interface IGraphAlgo {
 	//FixMe: probably better to handle them in separate interfaces ?
 	ConcreteGraph mst();
 	int[][] getAdjacencyMatrix ();
+	boolean isDirected();
 
 }

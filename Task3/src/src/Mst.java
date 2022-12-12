@@ -6,7 +6,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class Mst extends AbstractDecorator{
+import interfaces.IGraphAlgo;
+
+public class Mst extends AbstractDecorator implements IGraphAlgo {
 	
 	
 	ConcreteGraph graph;
@@ -62,6 +64,20 @@ public class Mst extends AbstractDecorator{
 		}
 		ConcreteGraph mst = new ConcreteGraph (edges, this.graph.rootNode);	
 		return mst;
+	}
+
+
+	@Override
+	public int[][] getAdjacencyMatrix() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public boolean isDirected() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }
