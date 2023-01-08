@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <configuration>
-	<feature name="Task3"/>
-	<feature name="Base"/>
+	<feature automatic="selected" name="Task3"/>
+	<feature automatic="selected" name="Graph"/>
+	<feature automatic="selected" name="Attributes"/>
+	<feature automatic="selected" manual="selected" name="Weighted"/>
+	<feature manual="selected" name="Colored"/>
+	<feature manual="selected" name="Directed"/>
+	<feature manual="selected" name="Labeled"/>
+	<feature automatic="selected" manual="selected" name="Algorithms"/>
+	<feature manual="selected" name="DFS"/>
+	<feature manual="selected" name="MST"/>
+	<feature manual="selected" name="ExportAdjacency"/>
+	<feature manual="selected" name="BFS"/>
 </configuration>

@@ -2,5 +2,16 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/Algorithms.jar"/>
+	<classpathentry kind="lib" path="lib/Attributes.jar"/>
+	<classpathentry kind="lib" path="lib/BFS.jar"/>
+	<classpathentry kind="lib" path="lib/Colored.jar"/>
+	<classpathentry kind="lib" path="lib/DFS.jar"/>
+	<classpathentry kind="lib" path="lib/Directed.jar"/>
+	<classpathentry kind="lib" path="lib/ExportAdjacency.jar"/>
+	<classpathentry kind="lib" path="lib/Graph.jar"/>
+	<classpathentry kind="lib" path="lib/Labeled.jar"/>
+	<classpathentry kind="lib" path="lib/MST.jar"/>
+	<classpathentry kind="lib" path="lib/Weighted.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

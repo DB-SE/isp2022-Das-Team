@@ -24,6 +24,7 @@
 					<feature name="DFS"/>
 					<feature name="MST"/>
 					<feature name="ExportAdjacency"/>
+					<feature name="BFS"/>
 				</and>
 			</and>
 		</and>
