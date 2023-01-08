@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="graphWithFeatureHouse"/>
+	<feature automatic="selected" name="Graph"/>
+	<feature name="Weighted"/>
+	<feature name="Colored"/>
+	<feature name="Directed"/>
+	<feature name="Labeled"/>
+	<feature name="DFS"/>
+	<feature name="MST"/>
+	<feature name="ExportAdjacency"/>
+	<feature manual="selected" name="BFS"/>
+</configuration>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="autolayoutconstraints" value="false"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showconstraints" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="graphWithFeatureHouse">
+			<graphics key="collapsed" value="false"/>
+			<and mandatory="true" name="Graph">
+			</and>
+					<feature name="Weighted"/>
+					<feature name="Colored"/>
+					<feature name="Directed"/>
+					<feature name="Labeled"/>
+					<feature name="DFS"/>
+					<feature name="MST"/>
+					<feature name="ExportAdjacency"/>
+					<feature name="BFS"/>
+					</and>
+	</struct>
+		<constraints>
+		<rule>
+			<imp>
+				<var>MST</var>
+				<var>Weighted</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>
