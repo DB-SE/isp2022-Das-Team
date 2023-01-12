@@ -2,12 +2,12 @@
 <configuration>
 	<feature automatic="selected" name="graphWithFeatureHouse"/>
 	<feature automatic="selected" name="Graph"/>
-	<feature name="Weighted"/>
+	<feature automatic="selected" name="Weighted"/>
 	<feature name="Colored"/>
-	<feature name="Directed"/>
+	<feature manual="selected" name="Directed"/>
 	<feature name="Labeled"/>
 	<feature name="DFS"/>
-	<feature name="MST"/>
+	<feature manual="selected" name="MST"/>
 	<feature name="ExportAdjacency"/>
 	<feature manual="selected" name="BFS"/>
 </configuration>

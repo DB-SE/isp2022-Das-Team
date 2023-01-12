@@ -4,8 +4,13 @@
 import java.util.List;
 import java.util.Map;
 
-//DFS, BFS
-public interface ITraverseGraph {
+public class BaseGraph {
 	
-			void traverse();
+
+	public boolean isDirected() {
+		return true;
+	}
+
 }
+
+

@@ -7,24 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class AdjacencyMatrix implements IGraphAlgo, IGraph {
-
+public class BaseGraph {
+	
 	int[][] adjacencyMatrix;
-	ConcreteGraph graph;
 	Map<Edge, Integer> nodeToWeight;
-
-	public AdjacencyMatrix(List<Edge> edges, Map<Edge, Integer> nodeToWeight, ConcreteGraph graph) {
-		this.adjacencyMatrix = this.createMatrix(edges);
-		this.graph = graph;
-		this.nodeToWeight = nodeToWeight;
-	}
-
-	@Override
-	public IGraph buildGraph(Node root, List<Edge> edges, Map<Node, String> nodeToLabel,
-			Map<Edge, Integer> nodeToWeight) {
-		// TODO Auto-generated method stub
-		return new AdjacencyMatrix(edges, nodeToWeight, new ConcreteGraph(edges, root));
-	}
 
 	
 	private int[][] createMatrix(List<Edge> edges) {
@@ -74,21 +60,9 @@ public class AdjacencyMatrix implements IGraphAlgo, IGraph {
 	
 	
 
-
 public int[][] getAdjacencyMatrix () {
 	return this.adjacencyMatrix;
 }
-	
-	@Override
-	public ConcreteGraph mst() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	public boolean isDirected() {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 }

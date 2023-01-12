@@ -7,20 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class Dfs implements ITraverseGraph , IGraph {
-
-	ConcreteGraph graph;
-
-	public Dfs(ConcreteGraph graph) {
-		super();
-		this.graph = graph;
-	}
-
-	@Override
-	public IGraph buildGraph(Node root, List<Edge> edges, Map<Node, String> nodeToLabel,
-			Map<Edge, Integer> nodeToWeight) {
-		return new ConcreteGraph(edges,root);
-	}
+public class BaseGraph {
+	
 
 	public void dfs() {
 
@@ -54,7 +42,6 @@ public class Dfs implements ITraverseGraph , IGraph {
 		}
 	}
 	
-	@Override
 	public void traverse() {
 		this.dfs();
 	}

@@ -13,24 +13,29 @@
 	<struct>
 		<and abstract="true" mandatory="true" name="graphWithFeatureHouse">
 			<graphics key="collapsed" value="false"/>
-			<and mandatory="true" name="Graph">
-			</and>
-					<feature name="Weighted"/>
-					<feature name="Colored"/>
-					<feature name="Directed"/>
-					<feature name="Labeled"/>
-					<feature name="DFS"/>
-					<feature name="MST"/>
-					<feature name="ExportAdjacency"/>
-					<feature name="BFS"/>
-					</and>
+			<feature mandatory="true" name="Graph"/>
+			<feature name="Weighted"/>
+			<feature name="Colored"/>
+			<feature name="Directed"/>
+			<feature name="Labeled"/>
+			<feature name="DFS"/>
+			<feature name="MST"/>
+			<feature name="ExportAdjacency"/>
+			<feature name="BFS"/>
+		</and>
 	</struct>
-		<constraints>
+	<constraints>
 		<rule>
 			<imp>
 				<var>MST</var>
 				<var>Weighted</var>
 			</imp>
+		</rule>
+		<rule>
+			<disj>
+				<var>BFS</var>
+				<var>DFS</var>
+			</disj>
 		</rule>
 	</constraints>
 </featureModel>

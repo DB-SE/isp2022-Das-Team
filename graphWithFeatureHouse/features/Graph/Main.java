@@ -14,12 +14,10 @@ public class Main {
 		List<Edge> edges = new ArrayList<Edge>();;
 		Node root = nodes.get(0);
 		
-		IGraph concreteGraph = new ConcreteGraph(edges, root);
+		BaseGraph graph = new BaseGraph(edges, root);
 		
-		IGraph mstGraph = new BFS((ConcreteGraph) concreteGraph);
-		
-		((BFS) mstGraph).traverse();
-		
+		graph.traverse();
+
 		
 		
 		
